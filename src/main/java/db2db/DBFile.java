@@ -2,13 +2,14 @@ package db2db;
 
 import okio.Buffer;
 import java.io.Closeable;
+import java.io.Flushable;
 import java.io.IOException;
 import java.util.ArrayList;
 
 /**
  * Interface for opening all types of db relation files
  */
-public interface DBFile extends Closeable {
+public interface DBFile extends Closeable, Flushable {
   /** Returns the Buffer for this DBFile */
   Buffer buffer();
 
